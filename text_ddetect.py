@@ -3,7 +3,7 @@ import easyocr
 
 def text_recognition(file_path, text_file_name="result.txt"):
     reader = easyocr.Reader(["ru", "en"])
-    result = reader.readtext(file_path, detail=0, paragraph=True)
+    result = reader.readtext(file_path, detail=0, paragraph=True) #Detail = 0 - Убрать ненужные детали       Paragraph - Сгрупировать по
     
     with open(text_file_name, "w") as file:
         for line in result:
